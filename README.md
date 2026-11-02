@@ -1,7 +1,7 @@
 # surveyqa
 
 **Quality assurance for multilingual survey translations.** Catch broken placeholders, answer-scale
-errors, glossary violations and meaning drift *before* fieldwork, when fixing them is still cheap.
+errors, glossary violations and meaning drift _before_ fieldwork, when fixing them is still cheap.
 
 ```
 $ surveyqa check survey.csv --glossary glossary.csv -o report.html
@@ -30,24 +30,24 @@ human reviewers: it gives them a ranked list of things to look at, and leaves a 
 
 ## What it checks
 
-| Check | Category | What it catches |
-|---|---|---|
-| `missing_translation` | mechanical | Empty target cells |
-| `untranslated` | mechanical | Target identical to source |
-| `placeholders` | mechanical | Lost or altered `{TOKEN}`, `[Q3]`, `${var}`, `%s`, `{{name}}` |
-| `html_tags` | mechanical | Lost or added markup |
-| `numbers` | mechanical | Years, ages, amounts or scale points that changed |
-| `length_ratio` | mechanical | Suspiciously short/long targets (omissions, additions) |
-| `question_punctuation` | mechanical | Questions that stopped being questions; Spanish `¿` |
-| `whitespace` | mechanical | Stray or doubled spaces |
-| `scale_length` | scale | Scales with a different number of translated options |
-| `scale_duplicate_labels` | scale | Two different options translated identically |
-| `scale_inconsistent_options` | scale | "Strongly agree" translated differently across scales |
-| `glossary` | consistency | Approved terminology not used |
-| `do_not_translate` | consistency | Protected names/acronyms altered |
-| `register` | consistency | Mixed formal/informal address (tú/usted, du/Sie, tu/vous) |
-| `meaning_drift` | meaning · LLM | Negation, quantifiers, intensity, omissions, double-barreled items |
-| `scale_equivalence` | scale · LLM | Reversed polarity, uneven intensity steps, asymmetric scales |
+| Check                        | Category      | What it catches                                                    |
+| ---------------------------- | ------------- | ------------------------------------------------------------------ |
+| `missing_translation`        | mechanical    | Empty target cells                                                 |
+| `untranslated`               | mechanical    | Target identical to source                                         |
+| `placeholders`               | mechanical    | Lost or altered `{TOKEN}`, `[Q3]`, `${var}`, `%s`, `{{name}}`      |
+| `html_tags`                  | mechanical    | Lost or added markup                                               |
+| `numbers`                    | mechanical    | Years, ages, amounts or scale points that changed                  |
+| `length_ratio`               | mechanical    | Suspiciously short/long targets (omissions, additions)             |
+| `question_punctuation`       | mechanical    | Questions that stopped being questions; Spanish `¿`                |
+| `whitespace`                 | mechanical    | Stray or doubled spaces                                            |
+| `scale_length`               | scale         | Scales with a different number of translated options               |
+| `scale_duplicate_labels`     | scale         | Two different options translated identically                       |
+| `scale_inconsistent_options` | scale         | "Strongly agree" translated differently across scales              |
+| `glossary`                   | consistency   | Approved terminology not used                                      |
+| `do_not_translate`           | consistency   | Protected names/acronyms altered                                   |
+| `register`                   | consistency   | Mixed formal/informal address (tú/usted, du/Sie, tu/vous)          |
+| `meaning_drift`              | meaning · LLM | Negation, quantifiers, intensity, omissions, double-barreled items |
+| `scale_equivalence`          | scale · LLM   | Reversed polarity, uneven intensity steps, asymmetric scales       |
 
 Run `surveyqa list-checks` for the current list.
 
@@ -62,7 +62,7 @@ pip install "surveyqa[llm]"     # + LLM checks via LiteLLM
 From source:
 
 ```bash
-git clone https://github.com/YOUR-ORG/surveyqa && cd surveyqa
+git clone https://github.com/zeerobug/surveyqa && cd surveyqa
 pip install -e ".[dev]"
 pytest
 ```
@@ -71,10 +71,10 @@ pytest
 
 One row per translatable item, one column per language:
 
-| id | role | question | scale | order | en | es | fr |
-|---|---|---|---|---|---|---|---|
-| Q5 | question | | | | How much do you agree…? | ¿Hasta qué punto…? | Dans quelle mesure…? |
-| Q5_1 | option | Q5 | AGREE5 | 1 | Strongly disagree | Muy en desacuerdo | Pas du tout d'accord |
+| id   | role     | question | scale  | order | en                      | es                 | fr                   |
+| ---- | -------- | -------- | ------ | ----- | ----------------------- | ------------------ | -------------------- |
+| Q5   | question |          |        |       | How much do you agree…? | ¿Hasta qué punto…? | Dans quelle mesure…? |
+| Q5_1 | option   | Q5       | AGREE5 | 1     | Strongly disagree       | Muy en desacuerdo  | Pas du tout d'accord |
 
 Only `id` and the language columns are required. `role`, `scale` and `order` unlock the
 question and scale checks. Formats: `.csv`, `.tsv`, `.xlsx`.
