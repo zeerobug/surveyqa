@@ -1,0 +1,23 @@
+id,role,question,scale,order,en,es,fr,de
+T1,title,,,,Graduate Employability Survey,Encuesta de empleabilidad de egresados,Enquête sur l'employabilité des diplômés,Umfrage zur Beschäftigungsfähigkeit von Absolventen
+I1,instruction,,,,"Dear {TOKEN:FIRSTNAME}, thank you for taking part. The survey takes about 10 minutes.","Estimado/a {TOKEN:FIRSTNAME}, gracias por participar. La encuesta dura unos 10 minutos.","Cher/Chère participant(e), merci de votre participation. L'enquête dure environ 10 minutes.","Liebe/r {TOKEN:FIRSTNAME}, vielen Dank für Ihre Teilnahme. Die Umfrage dauert etwa 10 Minuten."
+I2,instruction,,,,Please answer every question.,Por favor responda a todas las preguntas.,Please answer every question.,Bitte beantworten Sie alle Fragen.
+Q1,question,,,,In which year did you graduate from [UNIVERSITY]?,¿En qué año se graduó en [UNIVERSITY]?,En quelle année avez-vous obtenu votre diplôme à [UNIVERSITY] ?,In welchem Jahr haben Sie Ihren Abschluss an der [UNIVERSITY] gemacht?
+Q2,question,,,,How often have you never been contacted by an employer since 2024?,¿Con qué frecuencia ha sido contactado rara vez por un empleador desde 2024?,À quelle fréquence n'avez-vous jamais été contacté par un employeur depuis 2024 ?,Wie oft wurden Sie seit 2025 nie von einem Arbeitgeber kontaktiert?
+Q3,question,,,,How important is employability when you choose a university?,¿Qué importancia tiene la capacidad de empleo al elegir una universidad?,Quelle importance accordez-vous à l'employabilité lorsque vous choisissez une université ?,Wie wichtig ist Ihnen die Beschäftigungsfähigkeit bei der Wahl einer Universität?
+Q4,question,,,,Did you take part in an Erasmus+ exchange during your studies?,¿Participó en un intercambio Erasmus+ durante sus estudios?,Avez-vous participé à un échange Erasmus+ pendant vos études ?,Haben Sie während Ihres Studiums an einem Erasmus Plus-Austausch teilgenommen?
+Q5,question,,,,"Please indicate how much you agree: <b>My degree prepared me well for my current job.</b>","Indique su grado de acuerdo: Mi título me preparó bien para mi trabajo actual.","Veuillez indiquer votre degré d'accord : <b>Mon diplôme m'a bien préparé à mon emploi actuel.</b>","Bitte geben Sie an, wie sehr Sie zustimmen: <b>Mein Abschluss hat mich gut auf meinen jetzigen Job vorbereitet.</b>"
+Q5_1,option,Q5,AGREE_Q5,1,Strongly disagree,Muy en desacuerdo,Tout à fait d'accord,Stimme überhaupt nicht zu
+Q5_2,option,Q5,AGREE_Q5,2,Disagree,En desacuerdo,D'accord,Stimme nicht zu
+Q5_3,option,Q5,AGREE_Q5,3,Neither agree nor disagree,Ni de acuerdo ni en desacuerdo,Ni d'accord ni pas d'accord,Weder noch
+Q5_4,option,Q5,AGREE_Q5,4,Agree,De acuerdo,Pas d'accord,Stimme zu
+Q5_5,option,Q5,AGREE_Q5,5,Strongly agree,De acuerdo,Pas du tout d'accord,Stimme voll und ganz zu
+Q6,question,,,,How much do you agree: my university helped me find an internship?,¿Hasta qué punto estás de acuerdo: tu universidad te ayudó a encontrar unas prácticas?,Dans quelle mesure êtes-vous d'accord : mon université m'a aidé à trouver un stage ?,Wie sehr stimmst du zu: Deine Universität hat dir geholfen ein Praktikum zu finden?
+Q6_1,option,Q6,AGREE_Q6,1,Strongly disagree,Muy en desacuerdo,Pas du tout d'accord,Stimme überhaupt nicht zu
+Q6_2,option,Q6,AGREE_Q6,2,Disagree,En desacuerdo,Pas d'accord,Stimme nicht zu
+Q6_3,option,Q6,AGREE_Q6,3,Neither agree nor disagree,Ni de acuerdo ni en desacuerdo,Ni d'accord ni pas d'accord,Weder noch
+Q6_4,option,Q6,AGREE_Q6,4,Agree,De acuerdo,D'accord,Stimme zu
+Q6_5,option,Q6,AGREE_Q6,5,Strongly agree,Muy de acuerdo,Tout à fait d'accord,Stimme völlig zu
+Q7,question,,,,What is your current monthly gross salary in euros (for example 2500)?,¿Cuál es su salario bruto mensual actual en euros (por ejemplo 2500)?,Quel est votre salaire mensuel brut actuel ?,Wie hoch ist Ihr aktuelles monatliches Bruttogehalt in Euro (zum Beispiel 2500)?
+Q8,question,,,,"Which skills, if any, do you feel your programme should have taught you but did not?",¿Qué habilidades cree usted que su programa debería haberle enseñado pero no lo hizo?,,"Welche Fähigkeiten hätte Ihr Studiengang Ihnen Ihrer Meinung nach vermitteln sollen, hat es aber nicht getan?"
+Q9,question,,,,Would you recommend your university to a friend?,Recomendaría usted su universidad a un amigo?,Recommanderiez-vous votre université à un ami ?,Würden Sie Ihre Universität einem Freund  empfehlen?

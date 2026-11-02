@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "surveyqa"
+version = "0.1.0.dev0"
+description = "Quality assurance for multilingual survey translations: catch broken placeholders, scale errors and meaning drift before fieldwork."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [{ name = "Thomas" }]
+keywords = ["survey", "translation", "qa", "questionnaire", "localization", "llm", "trapd"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "Topic :: Software Development :: Localization",
+]
+dependencies = []  # core stays dependency-free on purpose
+
+[project.optional-dependencies]
+xlsx = ["openpyxl>=3.1"]
+llm = ["litellm>=1.40"]
+all = ["openpyxl>=3.1", "litellm>=1.40"]
+dev = ["pytest>=8", "ruff>=0.5", "openpyxl>=3.1"]
+
+[project.scripts]
+surveyqa = "surveyqa.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR-ORG/surveyqa"
+Issues = "https://github.com/YOUR-ORG/surveyqa/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/surveyqa"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
